@@ -11,10 +11,16 @@ function App() {
   return (
     <div>
       <NavBar />
-      <Home />
-      <About />
+      {/* Pass name and city to Home */}
+      <Home name={user.name} city={user.city} />
+      {/* Pass bio, github, and linkedin to About */}
+      <About bio={user.bio} github={user.links.github} linkedin={user.links.linkedin} />
     </div>
   );
 }
 
 export default App;
+
+
+
+
